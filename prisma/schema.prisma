@@ -1,0 +1,17 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://admin:pyrve2-siHryp-dacryc@cluster0.coewj47.mongodb.net/blog-etudu?appName=Cluster0"
+}
+
+model Post {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String
+  labels    String[]
+  createdAt DateTime @default(now())
+}
