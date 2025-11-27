@@ -7,6 +7,6 @@ export default defineConfig({
   },
   engine: "classic",
   datasource: {
-    url: "mongodb+srv://admin:pyrve2-siHryp-dacryc@cluster0.coewj47.mongodb.net/blog-etudu?appName=Cluster0"
+    url: process.env.MONGO_CONN_STR
   },
 });
